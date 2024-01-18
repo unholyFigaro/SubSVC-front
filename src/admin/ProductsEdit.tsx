@@ -27,7 +27,7 @@ const ProductsEdit = (props: PropsWithRef<any>) => {
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
 
-        await fetch(`http://localhost:8000/api/products/${params.id}`, {
+        await fetch(`http://localhost:43433/api/products/${params.id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
