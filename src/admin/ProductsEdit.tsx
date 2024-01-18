@@ -14,7 +14,7 @@ const ProductsEdit = (props: PropsWithRef<any>) => {
     useEffect(() => {
         (
             async () => {
-                const response = await fetch(`http://localhost:8000/api/products/${params.id}`);
+                const response = await fetch(`http://localhost:43433/api/products/${params.id}`);
 
                 const product: Product = await response.json();
 
