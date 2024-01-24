@@ -7,7 +7,7 @@ const Main = () => {
     useEffect(() => {
         (
             async () => {
-                const response = await fetch('http://localhost:8001/api/products');
+                const response = await fetch('http://ec2-13-53-40-213.eu-north-1.compute.amazonaws.com:8001/api/products');
 
                 const data = await response.json();
 
@@ -17,7 +17,7 @@ const Main = () => {
     }, []);
 
     const subs = async (id: number) => {
-        await fetch(`http://localhost:8001/api/products/${id}/subs`, {
+        await fetch(`http://ec2-13-53-40-213.eu-north-1.compute.amazonaws.com:8001/api/products/${id}/subs`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'}
         });
