@@ -14,7 +14,7 @@ const ProductsEdit = (props: PropsWithRef<any>) => {
     useEffect(() => {
         (
             async () => {
-                const response = await fetch(`http://localhost:43433/api/products/${params.id}`);
+                const response = await fetch(`http://ec2-13-53-40-213.eu-north-1.compute.amazonaws.com:43433/api/products/${params.id}`);
 
                 const product: Product = await response.json();
 
@@ -27,7 +27,7 @@ const ProductsEdit = (props: PropsWithRef<any>) => {
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
 
-        await fetch(`http://localhost:43433/api/products/${params.id}`, {
+        await fetch(`http://ec2-13-53-40-213.eu-north-1.compute.amazonaws.com:43433/api/products/${params.id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
